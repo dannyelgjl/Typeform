@@ -1,10 +1,26 @@
 import React from 'react';
+import { Main, Section, Sticky } from './styles';
+
+import FirstAndSecond from '../FirstAndSecond';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Main style={{ height:'1610vh' }} >
+        <Section  style={{ height: '72.7%' }}>
+          <FirstAndSecond />
+        </Section>
+
+        <Section style={{ height: '9.7%'}} >
+          <Sticky className="third" />
+        </Section>
+
+
+        <Section style={{ height: '10.1%'}} > 
+          <Sticky  className="fourth" />
+        </Section>
+      </Main>
+    </>
   )
 }
 
