@@ -4,6 +4,10 @@ import { Main, Section, Sticky } from './styles';
 import FirstAndSecond from '../FirstAndSecond';
 
 const Home = () => {
+  React.useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, []);
+
   return (
     <>
       <Main style={{ height:'1610vh' }} >

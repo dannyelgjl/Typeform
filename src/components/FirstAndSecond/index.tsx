@@ -6,8 +6,8 @@ import { Sticky } from '../Home/styles';
 const FirstAndSecond: React.FC = () => {
   const { scrollYProgress } = useViewportScroll();
 
-  const frameOpacity = useTransform(scrollYProgress, [0.196, 0.198], [0, 1]);
-  const frameScale = useTransform(scrollYProgress, [0.558, 0.627], [0.551, 0.8]);
+  const frameOpacity = useTransform(scrollYProgress, [0.196, 0.198], [0, 1])
+  const frameScale = useTransform(scrollYProgress, [0.558, 0.627], [0.511, 0.8])
   
   return (
     <Sticky className="second">
@@ -31,10 +31,56 @@ const FirstAndSecond: React.FC = () => {
 
 
 const First: React.FC = () => {
+  const { scrollYProgress } = useViewportScroll();
+
+  const firstScale = useTransform(scrollYProgress, 
+    [0.198, 0.264, 0.558, 0.627],
+    [1, 0.511, 0.511, 1]
+    );
+
+  
+  const firstRadius = useTransform(scrollYProgress, 
+    [0.198, 0.264, 0.558, 0.627],
+    [0, 4, 4, 0]
+    );  
+
+  const leftSideHeight = useTransform(scrollYProgress, 
+    [0, 0.058],
+    ['20vh', '100vh']
+    )  ;
+
+  const rightSideScale = useTransform(scrollYProgress, 
+    [0.047, 0.093],
+    [0, 0.511]
+    );  
+
+    const rightSideY = useTransform(scrollYProgress, 
+      [0.047, 0.093],
+      ['58vh', '0vh']
+      );  
+
   return (
     
-    <Sticky className="first"> 
-      
+    <Sticky className="first" style={{ scale:firstScale, borderRadius: firstRadius }}> 
+      <div className="a">
+        <motion.div 
+          className="left-side"  
+          style={{ 
+            height: leftSideHeight 
+            }} 
+          />
+        <div className="right-side">
+          <motion.div  
+          className="right-image"
+          style={{ 
+            y: rightSideY, 
+            scale: rightSideScale 
+            }} 
+          />
+        </div>
+      </div>
+      <div className="b"></div>
+      <div className="c"></div>
     </Sticky>
   );
 };
