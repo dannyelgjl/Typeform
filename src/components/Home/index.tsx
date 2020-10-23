@@ -3,6 +3,8 @@ import { Main, Section, Sticky } from './styles';
 
 import FirstAndSecond from '../FirstAndSecond';
 
+
+
 const Home = () => {
 
   React.useEffect(() => {
@@ -11,6 +13,7 @@ const Home = () => {
 
   return (
     <>
+
       <Main style={{ height: '1610vh' }} >
         <Section style={{ height: '72.7%' }}>
           <FirstAndSecond />
