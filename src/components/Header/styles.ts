@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const Container = styled(motion.header)`
   width: 100%;
@@ -8,5 +8,5 @@ export const Container = styled(motion.header)`
 
   position: fixed;
   top: 0;
-  z-index: 3
-`;
+  z-index: 9999;
+`

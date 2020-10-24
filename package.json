@@ -1,5 +1,5 @@
 {
-  "name": "typeform",
+  "name": "youtube-clone-typeform-homepage",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,14 +7,12 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
-    "@types/node": "^14.11.10",
+    "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.8",
-    "@types/react-router-dom": "^5.1.6",
-    "framer-motion": "^2.9.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-router-dom": "^5.2.0",
+    "@types/react-dom": "^16.9.0",
+    "framer-motion": "^2.6.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "styled-components": "^5.2.0",
     "typescript": "~3.7.2"
@@ -41,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.4"
+    "@types/styled-components": "^5.1.3"
   }
 }
